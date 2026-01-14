@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Tech Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Animasyon ve Geçiş Kontrolü */
+        .project-list {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .back-btn {
+            background: #444 !important;
+            margin-top: 10px;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <nav>
+        <nav class="container">
             <div class="logo">Tech Portofolio</div>
             <ul class="nav-links">
+                <li><a href="#about">About</a></li>
                 <li><a href="#backend">Backend</a></li>
                 <li><a href="#cybersecurity">Cyber Security</a></li>
                 <li><a href="#ai">AI</a></li>
@@ -19,25 +48,50 @@
     </header>
 
     <main>
+        <section id="about" class="tech-section">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="card about-card">
+                    <h3>System Architect & Backend Developer</h3>
+                    <p>
+                        C# ,Rust ve Python dilleriyle yüksek performanslı, ölçeklenebilir sistemler geliştiriyorum.
+                        Sadece kod yazmaya değil, sistemin mimarisine ve veri akışına odaklanan bir yazılımcıyım.
+                    </p>
+                    <p>
+                        Ana odağım Backend ve Siber güvenlik olmakla birlikte boş zamanlarımda kendi AI dil modelimi
+                        eğitiyorum.
+                        Aynı zamanda Upwork'te freelance olarak çalışıyorum.
+                    </p>
+                    <div style="display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap;">
+                        <div class="skill-container">
+                            <span class="skill-tag" style="--clr:#38bdf8;">#Backend</span>
+                            <span class="skill-tag" style="--clr:#34d399;">#CyberSecurity</span>
+                            <span class="skill-tag" style="--clr:#a855f7;">#SystemDesign</span>
+                            <span class="skill-tag" style="--clr:#f4702a;">#Rust</span>
+                            <span class="skill-tag" style="--clr:#68217a;">#Csharp</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="backend" class="tech-section backend">
             <div class="container">
                 <h2>Backend Development</h2>
-                <div class="content-grid">
+                <div id="backend-main" class="content-grid">
                     <div class="card">
                         <h3>My Projects</h3>
-                        <p>Explore my backend development projects including APIs, databases, and server-side applications.</p>
-                        <a href="#" class="btn">View Projects</a>
+                        <p>Explore my backend development projects including APIs and Rust/C# applications.</p>
+                        <a href="javascript:void(0)" onclick="toggleView('backend')" class="btn">View Projects</a>
                     </div>
+                </div>
+                <div id="backend-projects" class="content-grid project-list">
                     <div class="card">
-                        <h3>My Blog</h3>
-                        <p>Read articles about backend technologies, best practices, and development experiences.</p>
-                        <a href="#" class="btn">Read Blog</a>
+                        <h3>Pastane Otomasyon Sistemi</h3>
+                        <p>Rust ve C# ile geliştirilmiş yüksek performanslı stok yönetim motoru.</p>
+                        <a href="https://github.com" target="_blank" class="btn">GitHub Link</a>
                     </div>
-                    <div class="card">
-                        <h3>My Experiments for Life</h3>
-                        <p>Discover how backend development shapes my professional journey and problem-solving approach.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
+                    <button onclick="toggleView('backend')" class="btn back-btn">Geri Dön</button>
                 </div>
             </div>
         </section>
@@ -45,22 +99,20 @@
         <section id="cybersecurity" class="tech-section cybersecurity">
             <div class="container">
                 <h2>Cyber Security</h2>
-                <div class="content-grid">
+                <div id="cyber-main" class="content-grid">
                     <div class="card">
                         <h3>My Projects</h3>
-                        <p>Security-focused projects including penetration testing, security tools, and vulnerability assessments.</p>
-                        <a href="#" class="btn">View Projects</a>
+                        <p>Security tools and vulnerability assessments.</p>
+                        <a href="javascript:void(0)" onclick="toggleView('cyber')" class="btn">View Projects</a>
                     </div>
+                </div>
+                <div id="cyber-projects" class="content-grid project-list">
                     <div class="card">
-                        <h3>My Blog</h3>
-                        <p>Insights on cybersecurity trends, threat analysis, and security best practices.</p>
-                        <a href="#" class="btn">Read Blog</a>
+                        <h3>Security Scanner</h3>
+                        <p>Rust tabanlı port tarayıcı projesi.</p>
+                        <a href="#" target="_blank" class="btn">GitHub</a>
                     </div>
-                    <div class="card">
-                        <h3>My Experiments for Life</h3>
-                        <p>How cybersecurity knowledge impacts my daily digital life and security awareness.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
+                    <button onclick="toggleView('cyber')" class="btn back-btn">Geri Dön</button>
                 </div>
             </div>
         </section>
@@ -68,22 +120,20 @@
         <section id="ai" class="tech-section ai">
             <div class="container">
                 <h2>Artificial Intelligence</h2>
-                <div class="content-grid">
+                <div id="ai-main" class="content-grid">
                     <div class="card">
                         <h3>My Projects</h3>
-                        <p>AI and machine learning projects showcasing neural networks, data analysis, and automation.</p>
-                        <a href="#" class="btn">View Projects</a>
+                        <p>AI and machine learning projects.</p>
+                        <a href="javascript:void(0)" onclick="toggleView('ai')" class="btn">View Projects</a>
                     </div>
+                </div>
+                <div id="ai-projects" class="content-grid project-list">
                     <div class="card">
-                        <h3>My Blog</h3>
-                        <p>Articles on AI developments, machine learning concepts, and future technology trends.</p>
-                        <a href="#" class="btn">Read Blog</a>
+                        <h3>Data Analysis Bot</h3>
+                        <p>Python ve C# entegrasyonlu veri analiz aracı.</p>
+                        <a href="#" target="_blank" class="btn">GitHub</a>
                     </div>
-                    <div class="card">
-                        <h3>My Experiments for Life</h3>
-                        <p>Exploring how AI transforms everyday life and shapes our technological future.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
+                    <button onclick="toggleView('ai')" class="btn back-btn">Geri Dön</button>
                 </div>
             </div>
         </section>
@@ -91,8 +141,33 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Tech Portfolio. All rights reserved.</p>
+            <div style="margin-bottom: 1.5rem;">
+                <p style="margin-bottom: 1rem; color: #94a3b8;">Bana Ulaşın</p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <a href="https://www.upwork.com" target="_blank" class="btn" style="background: #14a800;">Upwork</a>
+                    <a href="https://www.linkedin.com" target="_blank" class="btn"
+                        style="background: #0077b5;">LinkedIn</a>
+                    <a href="mailto:senin@mailin.com" class="btn" style="background: #db4437;">E-Posta</a>
+                </div>
+            </div>
+            <p style="color: #64748b; font-size: 0.9rem;">&copy; 2026 Tech Portfolio. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        function toggleView(section) {
+            const mainDiv = document.getElementById(section + '-main');
+            const projectDiv = document.getElementById(section + '-projects');
+
+            if (mainDiv.style.display === 'none') {
+                mainDiv.style.display = 'grid';
+                projectDiv.style.display = 'none';
+            } else {
+                mainDiv.style.display = 'none';
+                projectDiv.style.display = 'grid';
+            }
+        }
+    </script>
 </body>
+
 </html>

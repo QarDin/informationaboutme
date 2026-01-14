@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,205 +7,201 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    background-color: #030712; /* Derin uzay siyahı */
+    color: #f1f5f9;
+    scroll-behavior: smooth;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2rem;
 }
 
-/* Header Styles */
+/* Navigasyon: Cam Efekti (Frosted Glass) */
 header {
-    background: #2c3e50;
-    color: white;
-    padding: 1rem 0;
+    background: rgba(3, 7, 18, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1.2rem 0;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #3498db;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #38bdf8;
+    letter-spacing: -1px;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .nav-links a {
-    color: white;
+    color: #94a3b8;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-links a:hover {
-    color: #3498db;
+    color: #f1f5f9;
 }
 
-/* Section Styles */
+/* Bölümler: Uzun ve Ferah */
 .tech-section {
-    padding: 4rem 0;
-    min-height: 100vh;
+    padding: 10rem 0; /* Geniş boşluk sayfayı uzun ve akışkan yapar */
 }
 
-.tech-section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: white;
+h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 4rem;
+    letter-spacing: -0.025em;
+    background: linear-gradient(to right, #f1f5f9, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
 }
 
+/* Kartlar: Modern & Soft Border */
 .card {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #0f172a;
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-12px);
+    border-color: rgba(56, 189, 248, 0.3);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5);
 }
 
 .card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #2c3e50;
+    color: #f1f5f9;
 }
 
 .card p {
-    margin-bottom: 1.5rem;
-    color: #666;
+    color: #94a3b8;
+    font-size: 1rem;
+    margin-bottom: 2rem;
 }
 
+/* Profesyonel Butonlar */
 .btn {
-    display: inline-block;
-    background: #3498db;
-    color: white;
-    padding: 0.75rem 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    background: #f1f5f9;
+    color: #030712;
+    padding: 0.8rem 2rem;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s all;
 }
 
 .btn:hover {
-    background: #000000;
-}
-
-/* Backend Section - Blue Theme */
-.backend {
-    background: linear-gradient(180deg, #004e16 30%, #01279a 70%);
-}
-
-.backend .card h3 {
-    color: #667eea;
-}
-
-.backend .btn {
-    background: #f57600;
-}
-
-.backend .btn:hover {
-    background: #5a6fd8;
-}
-
-/* Cyber Security Section - Green Theme */
-.cybersecurity {
-    background: linear-gradient(180deg, #01279a 40%, #450200 60%);
-}
-
-.cybersecurity .card h3 {
-    color: #11998e;
-}
-
-.cybersecurity .btn {
-    background: #004f20;
-}
-
-.cybersecurity .btn:hover {
-    background: #2660fd;
-}
-
-/* AI Section - Gray Theme */
-.ai {
-    background: linear-gradient(180deg, #450200 20%, #330063 60%);
-}
-
-.ai .card h3 {
-    color: #00b3f4;
-}
-
-.ai .btn {
-    background: #006d95;
-}
-
-.ai .btn:hover {
-    background: #058a00;
-}
-
-/* Footer Styles */
-footer {
-    background: #000000;
+    background: #38bdf8;
     color: white;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+
+.project-list { display: none; }
+
+/* Footer */
+footer {
+    padding: 6rem 0 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
-    padding: 2rem 0;
+}
+/* Arka plan için hareketli yıldız/parçacık etkisi simülasyonu */
+body {
+    background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
+    background-attachment: fixed;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    nav {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .tech-section h2 {
-        font-size: 2rem;
-    }
+/* Kartları Cam Efektine Çeviriyoruz */
+.card {
+    background: rgba(30, 41, 59, 0.4) !important; /* Yarı şeffaf */
+    backdrop-filter: blur(8px); /* Buzlu cam efekti */
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 480px) {
-    .container {
-        padding: 0 10px;
-    }
-    
-    .card {
-        padding: 1.5rem;
-    }
-    
-    .tech-section {
-        padding: 2rem 0;
-    }
+/* Kartın içindeki başlıkları parlat */
+.card h3 {
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* Scrollbar'ı (Kaydırma Çubuğu) Modernleştir */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #020617;
+}
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #38bdf8;
+}
+.skill-container {
+    display: flex; 
+    gap: 15px; 
+    margin-top: 25px; 
+    flex-wrap: wrap;
+}
+
+.skill-tag {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    cursor: default;
+    color: #94a3b8;
+}
+
+.skill-tag:hover {
+    border-color: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 20px var(--clr);
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.05);
 }
