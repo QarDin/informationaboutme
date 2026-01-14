@@ -1,59 +1,98 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kullanıcı Adı | Developer & Calisthenics</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
-    <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; }
-        .hero { text-align: center; padding: 50px 0; border-bottom: 1px solid #444; }
-        .stats { display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 20px; }
-        .card { border: 1px solid #444; padding: 15px; border-radius: 8px; width: 45%; min-width: 250px; margin-bottom: 15px; }
-        .japan-box { background: #2c3e50; padding: 10px; border-radius: 5px; font-style: italic; }
-    </style>
+    <title>My Tech Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">Merhaba</div>
+            <ul class="nav-links">
+                <li><a href="#backend">Backend</a></li>
+                <li><a href="#cybersecurity">Cyber Security</a></li>
+                <li><a href="#ai">AI</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section class="hero">
-        <h1>Merhaba, Ben [Adın] 👋</h1>
-        <p><strong>Yazılımcı | Calisthenics Tutkunu | Disiplin Odaklı</strong></p>
-    </section>
-
-    <section>
-        <h2>💻 Yazılım Serüveni</h2>
-        <p>Kod yazarken karmaşık problemleri çözmeyi, temiz ve sürdürülebilir sistemler kurmayı seviyorum.</p>
-        <ul>
-            <li><strong>Diller:</strong> JavaScript, [Diğerleri...]</li>
-            <li><strong>Odak:</strong> Web Teknolojileri ve Backend</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>🤸‍♂️ Fiziksel Disiplin</h2>
-        <div class="stats">
-            <div class="card">
-                <h3>Vücut Ağırlığı</h3>
-                <p>88 KG</p>
+    <main>
+        <section id="backend" class="tech-section backend">
+            <div class="container">
+                <h2>Backend Development</h2>
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>My Projects</h3>
+                        <p>Explore my backend development projects including APIs, databases, and server-side applications.</p>
+                        <a href="#" class="btn">View Projects</a>
+                    </div>
+                    <div class="card">
+                        <h3>My Blog</h3>
+                        <p>Read articles about backend technologies, best practices, and development experiences.</p>
+                        <a href="#" class="btn">Read Blog</a>
+                    </div>
+                    <div class="card">
+                        <h3>My Experiments for Life</h3>
+                        <p>Discover how backend development shapes my professional journey and problem-solving approach.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h3>Güç Göstergesi</h3>
-                <p>5-6 Tekrar Amut Şınavı (HSPU)</p>
-            </div>
-        </div>
-        <p>Spor benim için sadece ter atmak değil, zihinsel dayanıklılığı artırma yöntemi. 88 kg ile amutta dengede kalmak, sabırlı bir geliştirici olmanın fiziksel yansımasıdır.</p>
-    </section>
+        </section>
 
-    <section class="japan-box">
-        <p>📍 Şu an Türkiye'de geliştiriyor, kalben Japonya ile bağ kuruyorum.</p>
-    </section>
+        <section id="cybersecurity" class="tech-section cybersecurity">
+            <div class="container">
+                <h2>Cyber Security</h2>
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>My Projects</h3>
+                        <p>Security-focused projects including penetration testing, security tools, and vulnerability assessments.</p>
+                        <a href="#" class="btn">View Projects</a>
+                    </div>
+                    <div class="card">
+                        <h3>My Blog</h3>
+                        <p>Insights on cybersecurity trends, threat analysis, and security best practices.</p>
+                        <a href="#" class="btn">Read Blog</a>
+                    </div>
+                    <div class="card">
+                        <h3>My Experiments for Life</h3>
+                        <p>How cybersecurity knowledge impacts my daily digital life and security awareness.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ai" class="tech-section ai">
+            <div class="container">
+                <h2>Artificial Intelligence</h2>
+                <div class="content-grid">
+                    <div class="card">
+                        <h3>My Projects</h3>
+                        <p>AI and machine learning projects showcasing neural networks, data analysis, and automation.</p>
+                        <a href="#" class="btn">View Projects</a>
+                    </div>
+                    <div class="card">
+                        <h3>My Blog</h3>
+                        <p>Articles on AI developments, machine learning concepts, and future technology trends.</p>
+                        <a href="#" class="btn">Read Blog</a>
+                    </div>
+                    <div class="card">
+                        <h3>My Experiments for Life</h3>
+                        <p>Exploring how AI transforms everyday life and shapes our technological future.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p style="text-align: center; margin-top: 50px;">
-            <a href="https://github.com/[KullaniciAdin]">GitHub</a> | 
-            <a href="https://linkedin.com/in/[KullaniciAdin]">LinkedIn</a>
-        </p>
+        <div class="container">
+            <p>&copy; 2024 Tech Portfolio. All rights reserved.</p>
+        </div>
     </footer>
-
 </body>
 </html>
