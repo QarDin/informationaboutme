@@ -214,3 +214,16 @@ h2 {
     margin-bottom: 3rem;
     letter-spacing: -2px; 
 }
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #38bdf8;
+    margin-top: 10px;
+    border-radius: 2px;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.6); /* Hafif bir parlama */
+}
+h2 {
+    text-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+}
